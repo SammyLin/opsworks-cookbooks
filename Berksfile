@@ -1,4 +1,4 @@
-site :opscode
+source "https://supermarket.chef.io"
 
 cookbook 'ark'
 cookbook 'build-essential'
