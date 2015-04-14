@@ -1,3 +1,14 @@
-source "https://api.berkshelf.com"
+source "https://supermarket.getchef.com"
 
-cookbook 'collectd', :git => 'git@github.com:hectcastro/chef-collectd.git'
+cookbook 'ark'
+cookbook 'build-essential'
+cookbook 'collectd', github: 'hectcastro/chef-collectd'
+cookbook 'elasticsearch', github: 'elasticsearch/cookbook-elasticsearch'
+cookbook 'ipaddr_extensions'
+cookbook 'java'
+cookbook 'mosh'
+cookbook 'rsyslog'
+cookbook 'sysctl'
+cookbook 'td-agent', github: 'treasure-data/chef-td-agent'
+cookbook 'ulimit'
+cookbook 'opsworks_wordpress', github: 'polydice/opsworks_wordpress'

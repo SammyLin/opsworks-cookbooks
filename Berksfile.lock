@@ -1,13 +1,68 @@
 DEPENDENCIES
+  ark
+  build-essential
   collectd
     git: git@github.com:hectcastro/chef-collectd.git
     revision: 2d91ab8c1477ca64dc7a7be4f9a460fb1fef176a
+  elasticsearch
+    git: git://github.com/elasticsearch/cookbook-elasticsearch.git
+    revision: b3621f627edb45645200450362e7e717e49b7d27
+  ipaddr_extensions
+  java
+  mosh
+  opsworks_wordpress
+    git: git://github.com/polydice/opsworks_wordpress.git
+    revision: 136b6309626a7a60506e9f269d7604ed88908ee3
+  rsyslog
+  sysctl
+  td-agent
+    git: git://github.com/treasure-data/chef-td-agent.git
+    revision: a6a85958b808a6e2cd60a40206969ea5d39fd8a3
+  ulimit
 
 GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.7.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
   build-essential (2.2.2)
+  chef-sugar (3.1.0)
+  chef_handler (1.1.6)
   collectd (0.5.1)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  elasticsearch (0.3.13)
+    ark (>= 0.2.4)
+  hhvm (0.6.0)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
+  ipaddr_extensions (0.3.0)
+  java (1.31.0)
+  monit (0.7.5)
+  mosh (0.4.0)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  ohai (2.0.1)
+  openssl (4.0.0)
+    chef-sugar (>= 0.0.0)
+  opsworks_wordpress (0.1.0)
+    hhvm (>= 0.0.0)
+    openssl (>= 0.0.0)
+  rsyslog (1.15.0)
+  sysctl (0.6.2)
+    ohai (>= 0.0.0)
+  td-agent (2.0.2)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
+  ulimit (0.3.3)
+  windows (1.36.6)
+    chef_handler (>= 0.0.0)
+  xml (1.2.13)
+    build-essential (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
   yum (3.5.4)
   yum-epel (0.6.0)
     yum (~> 3.0)
