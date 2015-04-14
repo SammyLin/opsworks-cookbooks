@@ -1,0 +1,7 @@
+name             'op-influxdb'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures op-influxdb'
+long_description 'Installs/Configures op-influxdb'
+version          '0.1.0'
