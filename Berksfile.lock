@@ -1,0 +1,13 @@
+DEPENDENCIES
+  collectd
+    git: git@github.com:hectcastro/chef-collectd.git
+    revision: 2d91ab8c1477ca64dc7a7be4f9a460fb1fef176a
+
+GRAPH
+  build-essential (2.2.2)
+  collectd (0.5.1)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.5.4)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
