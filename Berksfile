@@ -1,4 +1,4 @@
-source "https://supermarket.getchef.com"
+site :opscode
 
 cookbook 'ark'
 cookbook 'build-essential'
