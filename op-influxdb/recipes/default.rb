@@ -9,7 +9,7 @@
 
 
 # influxdb
-# include_recipe "influxdb"
+include_recipe "influxdb"
 
 service "influxdb" do
   action [:enable, :start]
