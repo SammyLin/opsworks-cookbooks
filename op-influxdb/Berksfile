@@ -1,5 +1,0 @@
-source "https://supermarket.chef.io"
-
-metadata
-
-cookbook 'influxdb', git: 'git://github.com/SimpleFinance/chef-influxdb.git'
