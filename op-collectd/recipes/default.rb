@@ -38,3 +38,35 @@
 #   supports :status => true, :restart => true
 #   action [ :enable, :start ]
 # end
+
+servers = []
+
+if Chef::Config[:solo]
+  if node['collectd']['server_address'].nil?
+    servers << '127.0.0.1'
+  else
+    servers << node['collectd']['server_address']
+  end
+else
+  query = "recipes:#{node['collectd']['server_recipe']} "
+  query << "AND chef_environment:#{node.chef_environment}"
+  search(:node, query) do |n|
+    servers << n['fqdn']
+  end
+end
+
+log servers
+
+if node[:influxdb][:enable]
+template "#{node["collectd"]["dir"]}/etc/conf.d/network.conf" do
+  source "collectd_network.conf.erb"
+    variables({
+       :ipaddress => node[:influxdb][:ipaddress],
+       :prot => node[:influxdb][:prot]
+     })
+end
+end
+
+service "collectd" do
+  action :restart
+end

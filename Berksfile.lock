@@ -1,4 +1,5 @@
 DEPENDENCIES
+  apt
   ark
   build-essential
   collectd
@@ -7,9 +8,12 @@ DEPENDENCIES
   elasticsearch
     git: git://github.com/elasticsearch/cookbook-elasticsearch.git
     revision: b3621f627edb45645200450362e7e717e49b7d27
+  influxdb (~> 0.1.4)
   ipaddr_extensions
   java
   mosh
+  op-collectd
+    path: op-collectd
   opsworks_wordpress
     git: git://github.com/polydice/opsworks_wordpress.git
     revision: 136b6309626a7a60506e9f269d7604ed88908ee3
@@ -38,14 +42,18 @@ GRAPH
   hhvm (0.6.0)
     apt (>= 0.0.0)
     yum (>= 0.0.0)
+  influxdb (0.1.4)
+    limits (~> 0.2)
   ipaddr_extensions (0.3.0)
   java (1.31.0)
+  limits (0.2.0)
   monit (0.7.5)
   mosh (0.4.0)
     apt (>= 0.0.0)
     yum (>= 0.0.0)
     yum-epel (>= 0.0.0)
   ohai (2.0.1)
+  op-collectd (0.1.0)
   openssl (4.0.0)
     chef-sugar (>= 0.0.0)
   opsworks_wordpress (0.1.0)

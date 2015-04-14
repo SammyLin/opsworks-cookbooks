@@ -12,3 +12,7 @@ cookbook 'sysctl'
 cookbook 'td-agent', github: 'treasure-data/chef-td-agent'
 cookbook 'ulimit'
 cookbook 'opsworks_wordpress', github: 'polydice/opsworks_wordpress'
+cookbook 'influxdb', '~> 0.1.4'
+cookbook 'apt'
+
+cookbook 'op-collectd', path: 'op-collectd'

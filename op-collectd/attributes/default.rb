@@ -11,3 +11,7 @@ default["influxdb"]["enable"]             = false
 default["influxdb"]["ip"]                 = "127.0.0.1"
 default["influxdb"]["prot"]               = "25826"
 
+
+default["influxdb"]["enable"] = false
+default["influxdb"]["ipaddress"] = "127.0.0.1"
+default["influxdb"]["prot"] = "25826"

@@ -1,0 +1,45 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: client
+    run_list:
+      - recipe[apt]
+      - recipe[collectd]
+      - recipe[collectd::attribute_driven]
+      - recipe[op-collectd::default]
+    attributes:
+      influxdb:
+        enable: true
+        ipaddress: "127.0.0.1"
+        prot: "25826"
+      collectd:
+        version: "5.4.2"
+        checksum: "9778080ee9ee676c7130b1ce86c2843c7359e29b9bd1c1c0e48fcd9cccf089eb"
+        url: "https://collectd.org/files/collectd-5.4.2.tar.gz"
+        plugins:
+          syslog:
+            config: { LogLevel: "Info" }
+          disk: { }
+          swap: { }
+          memory: { }
+          cpu: { }
+          interface:
+            config: { Interface: "lo", IgnoreSelected: true }
+          df:
+            config:
+              ReportReserved: false
+              FSType: [ "proc", "sysfs", "fusectl", "debugfs", "devtmpfs", "devpts", "tmpfs" ]
+              IgnoreSelected: true
+  - name: server
+    run_list:
+      - recipe[apt]
+      - recipe[influxdb::default]
+    attributes:
