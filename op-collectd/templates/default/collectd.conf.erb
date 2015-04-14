@@ -1,0 +1,38 @@
+Hostname "<%= @name %>"
+FQDNLookup true
+BaseDir "<%= @dir %>"
+PluginDir "<%= @dir %>/lib/collectd"
+TypesDB "<%= @dir %>/share/collectd/types.db"
+Interval <%= @interval %>
+ReadThreads <%= @read_threads %>
+
+Include "/etc/collectd/filters.conf"
+Include "/etc/collectd/thresholds.conf"
+
+LoadPlugin syslog
+LoadPlugin battery
+LoadPlugin cpu
+LoadPlugin df
+LoadPlugin disk
+LoadPlugin entropy
+LoadPlugin interface
+LoadPlugin irq
+LoadPlugin load
+LoadPlugin memory
+LoadPlugin processes
+LoadPlugin rrdtool
+LoadPlugin swap
+LoadPlugin users
+
+<Plugin syslog>
+  LogLevel info
+</Plugin>
+
+<% if node["influxdb"]["enable"] == true %>
+
+LoadPlugin network
+<Plugin network>
+  Server "<%= node["influxdb"]["ip"] %>" "<%= node["influxdb"]["prot"] %>"
+</Plugin>
+
+<% end %>
