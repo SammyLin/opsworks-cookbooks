@@ -3,7 +3,7 @@ DEPENDENCIES
   ark
   build-essential
   collectd
-    git: git@github.com:hectcastro/chef-collectd.git
+    git: git://github.com/SammyLin/chef-collectd.git
     revision: 2d91ab8c1477ca64dc7a7be4f9a460fb1fef176a
   elasticsearch
     git: git://github.com/elasticsearch/cookbook-elasticsearch.git
