@@ -9,9 +9,6 @@ cookbook 'ipaddr_extensions'
 cookbook 'java'
 cookbook 'td-agent', git: 'git://github.com/treasure-data/chef-td-agent.git'
 cookbook 'influxdb', git: 'git://github.com/SammyLin/influxdb-chef.git'
-# cookbook 'influxdb', path: '/Users/Sammy/commandp/influxdb-chef'
-# cookbook 'influxdb', git: 'git@github.com:SimpleFinance/chef-influxdb.git'
-
 
 cookbook 'op-collectd', path: 'op-collectd'
 cookbook 'op-influxdb', path: 'op-influxdb'

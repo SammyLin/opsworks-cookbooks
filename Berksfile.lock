@@ -9,7 +9,8 @@ DEPENDENCIES
     git: git://github.com/elasticsearch/cookbook-elasticsearch.git
     revision: b3621f627edb45645200450362e7e717e49b7d27
   influxdb
-    path: ../influxdb-chef
+    git: git://github.com/SammyLin/influxdb-chef.git
+    revision: 94dda023981fab37aaa55b0b89bd2d3c30543bf2
   ipaddr_extensions
   java
   op-collectd
