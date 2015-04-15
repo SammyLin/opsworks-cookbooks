@@ -42,4 +42,10 @@ suites:
     run_list:
       - recipe[apt]
       - recipe[influxdb::default]
+      - recipe[op-influxdb]
     attributes:
+      influxdb:
+        config:
+          input_plugins:
+            collectd:
+              enabled: true
