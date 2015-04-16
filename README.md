@@ -7,6 +7,7 @@
 run_list
 
     recipe[apt]
+    recipe[ohai]
     recipe[collectd]
     recipe[op-influxdb]
     recipe[collectd::attribute_driven]
