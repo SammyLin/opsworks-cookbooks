@@ -8,9 +8,10 @@ DEPENDENCIES
   elasticsearch
     git: git://github.com/elasticsearch/cookbook-elasticsearch.git
     revision: b3621f627edb45645200450362e7e717e49b7d27
+  grafana (~> 1.5.5)
   influxdb
-    git: git://github.com/SammyLin/influxdb-chef.git
-    revision: 94dda023981fab37aaa55b0b89bd2d3c30543bf2
+    git: git://github.com/SimpleFinance/chef-influxdb.git
+    revision: 68a843ce4db565359a7664abe79fc1bb0e73a8fd
   ipaddr_extensions
   java
   op-collectd
@@ -28,22 +29,49 @@ GRAPH
   ark (0.9.0)
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
   build-essential (2.2.2)
   chef-sugar (3.1.0)
   chef_handler (1.1.6)
   collectd (0.5.1)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  dmg (2.2.2)
   elasticsearch (0.3.13)
     ark (>= 0.2.4)
-  influxdb (0.1.4)
-    limits (~> 0.2)
+  git (4.1.0)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  grafana (1.5.5)
+    ark (>= 0.7.2)
+    git (>= 0.0.0)
+    nginx (>= 0.0.0)
+  influxdb (2.5.0)
+    chef_handler (>= 0.0.0)
   ipaddr_extensions (0.3.0)
   java (1.31.0)
-  limits (0.2.0)
   monit (0.7.5)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (2.0.1)
   op-collectd (0.1.0)
   op-influxdb (0.1.0)
+    influxdb (>= 0.0.0)
+  rsyslog (1.15.0)
+  runit (1.5.18)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
   td-agent (2.0.2)
     apt (>= 0.0.0)
     yum (>= 0.0.0)
