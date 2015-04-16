@@ -14,6 +14,7 @@ DEPENDENCIES
     revision: 68a843ce4db565359a7664abe79fc1bb0e73a8fd
   ipaddr_extensions
   java
+  ohai
   op-collectd
     path: op-collectd
   op-influxdb
