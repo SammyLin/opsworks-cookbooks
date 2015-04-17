@@ -11,6 +11,7 @@ cookbook 'td-agent', git: 'git://github.com/treasure-data/chef-td-agent.git'
 cookbook 'influxdb', git: 'git://github.com/SimpleFinance/chef-influxdb.git'
 cookbook 'grafana', '~> 1.5.5'
 cookbook 'ohai'
+cookbook 'swap', git: 'git://github.com/att-cloud/cookbook-swap.git'
 
 cookbook 'op-collectd', path: 'op-collectd'
 cookbook 'op-influxdb', path: 'op-influxdb'

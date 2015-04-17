@@ -7,6 +7,7 @@
 run_list
 
     recipe[apt]
+    recipe[cookbook-swap]
     recipe[ohai]
     recipe[collectd]
     recipe[op-influxdb]
@@ -17,6 +18,7 @@ run_list
 
 安裝以下幾個服務
 
+* cookbook-swap
 * influxdb
 * grafana
 * java
@@ -25,6 +27,7 @@ run_list
 
 預設 attribute
 
+    default['create-swap']['swap-size'] = 8 # In gigabytes
     default["influxdb"]["database"] = ["collectd"]
     default["influxdb"]["admin"] = "admin"
     default["influxdb"]["password"] = "password"
